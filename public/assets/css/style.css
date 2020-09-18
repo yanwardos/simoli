@@ -1,0 +1,110 @@
+
+/*ini adalah style jumbotron*/
+.jumbotron {
+	background : none;
+	text-align: center;
+	/*Margin-top untuk mengatur posisi jumbotron*/
+	margin-top: 50px;
+}
+.jumbotron .display-4 {
+/*Merubah warna tulisan pada class display-4 berubah*/
+	color : white;
+}
+
+.jumbotron p {
+	color : #000000 ;
+}
+.jumbotron hr {
+	border-color: #F05F40;
+	width: 700px;
+	border-width: 3px;
+}
+/*untuk button*/
+.jumbotron .btn {
+	background-color: #F05F40;
+	border: none;
+	/*Bentuk sisi sisi pada button*/
+	border-radius: 50px;
+	/* Untuk mengatur besar button*/
+	padding-right: 25px;
+	padding-left: 25px;
+	margin-top: 40px
+}
+
+/*ini adalah style slider*/
+
+.carousel-item {
+	height: 600px;
+}
+.carousel-item img {
+	margin-top: -120px;
+}
+.carousel-item .display-4 {
+	margin-top: -440px;
+}
+.carousel-item hr {
+	border-color: #F05F40;
+	width: 700px;
+	border-width: 3px;
+}
+/*untuk button*/
+.carousel-item .btn {
+	background-color: #F05F40;
+	border: none;
+	/*Bentuk sisi sisi pada button*/
+	border-radius: 50px;
+	/* Untuk mengatur besar button*/
+	padding-right: 25px;
+	padding-left: 25px;
+	margin-top: 40px
+}
+
+.carousel-item img{
+	object-fit: cover;
+	height: 700px;
+}
+
+.sidebar {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 100; /* Behind the navbar */
+	padding: 0;
+	box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+.sidebar-sticky {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 48px; /* Height of navbar */
+	height: calc(100vh - 48px);
+	padding-top: .5rem;
+	overflow-x: hidden;
+	overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+
+
+.sidebar .nav-link {
+	font-weight: 500;
+	color: #333;
+  }
+  
+  .sidebar .nav-link .feather {
+	margin-right: 4px;
+	color: #999;
+  }
+  
+  .sidebar .nav-link.active {
+	color: #007bff;
+  }
+  
+  .sidebar .nav-link:hover .feather,
+  .sidebar .nav-link.active .feather {
+	color: inherit;
+  }
+  
+  .sidebar-heading {
+	font-size: .75rem;
+	text-transform: uppercase;
+  }

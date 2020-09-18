@@ -1,0 +1,36 @@
+CRITICAL - 2020-07-26 22:19:07 --> Undefined variable: monitorings
+#0 /mnt/common/devweb/kpkevin/app/Controllers/AboutController.php(17): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(914): App\Controllers\AboutController->index()
+#2 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#3 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#4 /mnt/common/devweb/kpkevin/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-07-26 22:49:07 --> Undefined variable: gedungs
+#0 /mnt/common/devweb/kpkevin/app/Views/monitoring/tambah.php(41): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /mnt/common/devweb/kpkevin/system/View/View.php(246): include('/mnt/common/dev...')
+#2 /mnt/common/devweb/kpkevin/system/Common.php(1087): CodeIgniter\View\View->render()
+#3 /mnt/common/devweb/kpkevin/app/Controllers/Monitoring.php(38): view()
+#4 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(914): App\Controllers\Monitoring->tambahIface()
+#5 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#6 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#7 /mnt/common/devweb/kpkevin/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-07-26 22:49:58 --> Undefined variable: gedungs
+#0 /mnt/common/devweb/kpkevin/app/Views/monitoring/tambah.php(41): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /mnt/common/devweb/kpkevin/system/View/View.php(246): include('/mnt/common/dev...')
+#2 /mnt/common/devweb/kpkevin/system/Common.php(1087): CodeIgniter\View\View->render()
+#3 /mnt/common/devweb/kpkevin/app/Controllers/Monitoring.php(38): view()
+#4 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(914): App\Controllers\Monitoring->tambahIface()
+#5 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#6 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#7 /mnt/common/devweb/kpkevin/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-07-26 23:24:47 --> Call to undefined function base_urp()
+#0 /mnt/common/devweb/kpkevin/system/View/View.php(246): include()
+#1 /mnt/common/devweb/kpkevin/system/Common.php(1087): CodeIgniter\View\View->render()
+#2 /mnt/common/devweb/kpkevin/app/Controllers/Monitoring.php(27): view()
+#3 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(914): App\Controllers\Monitoring->index()
+#4 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#5 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#6 /mnt/common/devweb/kpkevin/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}

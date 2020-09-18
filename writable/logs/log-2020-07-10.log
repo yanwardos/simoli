@@ -1,0 +1,167 @@
+CRITICAL - 2020-07-10 07:32:02 --> syntax error, unexpected '}'
+#0 /mnt/common/devweb/kpkevin/system/Router/Router.php(192): CodeIgniter\Router\Router->autoRoute()
+#1 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(789): CodeIgniter\Router\Router->handle()
+#2 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt()
+#3 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#4 /mnt/common/devweb/kpkevin/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-07-10 07:32:44 --> syntax error, unexpected '}'
+#0 /mnt/common/devweb/kpkevin/system/Router/Router.php(192): CodeIgniter\Router\Router->autoRoute()
+#1 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(789): CodeIgniter\Router\Router->handle()
+#2 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt()
+#3 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#4 /mnt/common/devweb/kpkevin/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-07-10 07:32:52 --> Call to a member function helper() on null
+#0 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(886): App\Controllers\Welcome->__construct()
+#1 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#2 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#3 /mnt/common/devweb/kpkevin/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-07-10 07:33:37 --> Call to a member function helper() on null
+#0 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(886): App\Controllers\Welcome->__construct()
+#1 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#2 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#3 /mnt/common/devweb/kpkevin/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-07-10 07:33:52 --> Undefined property: App\Controllers\Welcome::$load
+#0 /mnt/common/devweb/kpkevin/app/Controllers/Welcome.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(886): App\Controllers\Welcome->__construct()
+#2 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#3 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#4 /mnt/common/devweb/kpkevin/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-07-10 07:34:45 --> Undefined property: App\Controllers\Welcome::$load
+#0 /mnt/common/devweb/kpkevin/app/Controllers/Welcome.php(9): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(886): App\Controllers\Welcome->__construct()
+#2 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#3 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#4 /mnt/common/devweb/kpkevin/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-07-10 07:35:30 --> Undefined property: App\Controllers\Welcome::$load
+#0 /mnt/common/devweb/kpkevin/app/Controllers/Welcome.php(14): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(914): App\Controllers\Welcome->index()
+#2 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#3 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#4 /mnt/common/devweb/kpkevin/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-07-10 07:36:09 --> Undefined property: App\Controllers\Welcome::$load
+#0 /mnt/common/devweb/kpkevin/app/Controllers/Welcome.php(14): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(914): App\Controllers\Welcome->index()
+#2 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#3 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#4 /mnt/common/devweb/kpkevin/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-07-10 07:38:45 --> Undefined property: App\Controllers\Welcome::$load
+#0 /mnt/common/devweb/kpkevin/app/Controllers/Welcome.php(14): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(914): App\Controllers\Welcome->index()
+#2 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#3 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#4 /mnt/common/devweb/kpkevin/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-07-10 07:49:07 --> Invalid file: monitoring_index.php
+#0 /mnt/common/devweb/kpkevin/system/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+#1 /mnt/common/devweb/kpkevin/system/Common.php(1087): CodeIgniter\View\View->render()
+#2 /mnt/common/devweb/kpkevin/app/Controllers/Monitoring.php(15): view()
+#3 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(914): App\Controllers\Monitoring->index()
+#4 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#5 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#6 /mnt/common/devweb/kpkevin/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-07-10 07:52:25 --> Invalid file: monitoring_index.php
+#0 /mnt/common/devweb/kpkevin/system/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+#1 /mnt/common/devweb/kpkevin/system/Common.php(1087): CodeIgniter\View\View->render()
+#2 /mnt/common/devweb/kpkevin/app/Controllers/Monitoring.php(15): view()
+#3 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(914): App\Controllers\Monitoring->index()
+#4 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#5 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#6 /mnt/common/devweb/kpkevin/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-07-10 20:39:33 --> Argument 1 passed to CodeIgniter\Database\BaseResult::getFirstRow() must be of the type string, null given, called in /mnt/common/devweb/kpkevin/system/Model.php on line 383
+#0 /mnt/common/devweb/kpkevin/system/Model.php(383): CodeIgniter\Database\BaseResult->getFirstRow()
+#1 /mnt/common/devweb/kpkevin/app/Controllers/Gedung.php(23): CodeIgniter\Model->find()
+#2 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(914): App\Controllers\Gedung->index()
+#3 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#4 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#5 /mnt/common/devweb/kpkevin/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-07-10 20:41:16 --> Argument 1 passed to CodeIgniter\Database\BaseResult::getFirstRow() must be of the type string, null given, called in /mnt/common/devweb/kpkevin/system/Model.php on line 383
+#0 /mnt/common/devweb/kpkevin/system/Model.php(383): CodeIgniter\Database\BaseResult->getFirstRow()
+#1 /mnt/common/devweb/kpkevin/app/Controllers/Gedung.php(23): CodeIgniter\Model->find()
+#2 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(914): App\Controllers\Gedung->index()
+#3 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#4 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#5 /mnt/common/devweb/kpkevin/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-07-10 20:41:46 --> Argument 1 passed to CodeIgniter\Database\BaseResult::getFirstRow() must be of the type string, null given, called in /mnt/common/devweb/kpkevin/system/Model.php on line 383
+#0 /mnt/common/devweb/kpkevin/system/Model.php(383): CodeIgniter\Database\BaseResult->getFirstRow()
+#1 /mnt/common/devweb/kpkevin/app/Controllers/Gedung.php(23): CodeIgniter\Model->find()
+#2 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(914): App\Controllers\Gedung->index()
+#3 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#4 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#5 /mnt/common/devweb/kpkevin/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-07-10 20:50:27 --> Trying to get property 'id_gedung' of non-object
+#0 /mnt/common/devweb/kpkevin/app/Controllers/Gedung.php(23): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(914): App\Controllers\Gedung->index()
+#2 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#3 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#4 /mnt/common/devweb/kpkevin/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-07-10 20:51:19 --> Trying to get property 'id_gedung' of non-object
+#0 /mnt/common/devweb/kpkevin/app/Controllers/Gedung.php(23): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(914): App\Controllers\Gedung->index()
+#2 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#3 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#4 /mnt/common/devweb/kpkevin/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-07-10 20:52:18 --> Trying to access array offset on value of type null
+#0 /mnt/common/devweb/kpkevin/app/Controllers/Gedung.php(23): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(914): App\Controllers\Gedung->index()
+#2 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#3 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#4 /mnt/common/devweb/kpkevin/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-07-10 20:52:28 --> Trying to access array offset on value of type null
+#0 /mnt/common/devweb/kpkevin/app/Controllers/Gedung.php(23): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(914): App\Controllers\Gedung->index()
+#2 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#3 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#4 /mnt/common/devweb/kpkevin/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-07-10 21:18:55 --> Undefined variable: gedung
+#0 /mnt/common/devweb/kpkevin/app/Views/gedung/index.php(3): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /mnt/common/devweb/kpkevin/system/View/View.php(246): include('/mnt/common/dev...')
+#2 /mnt/common/devweb/kpkevin/system/Common.php(1087): CodeIgniter\View\View->render()
+#3 /mnt/common/devweb/kpkevin/app/Controllers/Gedung.php(22): view()
+#4 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(914): App\Controllers\Gedung->index()
+#5 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#6 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#7 /mnt/common/devweb/kpkevin/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-07-10 21:19:17 --> Undefined variable: gedungs
+#0 /mnt/common/devweb/kpkevin/app/Views/gedung/index.php(3): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /mnt/common/devweb/kpkevin/system/View/View.php(246): include('/mnt/common/dev...')
+#2 /mnt/common/devweb/kpkevin/system/Common.php(1087): CodeIgniter\View\View->render()
+#3 /mnt/common/devweb/kpkevin/app/Controllers/Gedung.php(22): view()
+#4 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(914): App\Controllers\Gedung->index()
+#5 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#6 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#7 /mnt/common/devweb/kpkevin/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-07-10 21:27:17 --> syntax error, unexpected end of file
+#0 /mnt/common/devweb/kpkevin/system/Common.php(1087): CodeIgniter\View\View->render()
+#1 /mnt/common/devweb/kpkevin/app/Controllers/Gedung.php(23): view()
+#2 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(914): App\Controllers\Gedung->index()
+#3 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#4 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#5 /mnt/common/devweb/kpkevin/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-07-10 21:28:02 --> syntax error, unexpected end of file
+#0 /mnt/common/devweb/kpkevin/system/Common.php(1087): CodeIgniter\View\View->render()
+#1 /mnt/common/devweb/kpkevin/app/Controllers/Gedung.php(23): view()
+#2 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(914): App\Controllers\Gedung->index()
+#3 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#4 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#5 /mnt/common/devweb/kpkevin/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}

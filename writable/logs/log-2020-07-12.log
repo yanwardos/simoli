@@ -1,0 +1,9 @@
+CRITICAL - 2020-07-12 11:04:50 --> Call to undefined function url()
+#0 /mnt/common/devweb/kpkevin/system/View/View.php(246): include()
+#1 /mnt/common/devweb/kpkevin/system/Common.php(1087): CodeIgniter\View\View->render()
+#2 /mnt/common/devweb/kpkevin/app/Controllers/Welcome.php(14): view()
+#3 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(914): App\Controllers\Welcome->index()
+#4 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#5 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#6 /mnt/common/devweb/kpkevin/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}

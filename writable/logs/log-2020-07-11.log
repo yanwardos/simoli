@@ -1,0 +1,111 @@
+CRITICAL - 2020-07-11 07:43:00 --> Undefined property: App\Controllers\Monitoring::$load
+#0 /mnt/common/devweb/kpkevin/app/Controllers/Monitoring.php(12): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(886): App\Controllers\Monitoring->__construct()
+#2 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(395): CodeIgniter\CodeIgniter->createController()
+#3 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#4 /mnt/common/devweb/kpkevin/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-07-11 07:53:24 --> Call to undefined method CodeIgniter\HTTP\Response::getPost()
+#0 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(914): App\Controllers\Monitoring->tambahData()
+#1 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#2 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#3 /mnt/common/devweb/kpkevin/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-07-11 07:53:34 --> Call to undefined method CodeIgniter\HTTP\Response::getPost()
+#0 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(914): App\Controllers\Monitoring->tambahData()
+#1 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#2 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#3 /mnt/common/devweb/kpkevin/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-07-11 07:55:19 --> Call to undefined method CodeIgniter\HTTP\Response::parse_url()
+#0 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(914): App\Controllers\Monitoring->tambahData()
+#1 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#2 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#3 /mnt/common/devweb/kpkevin/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-07-11 07:56:04 --> Undefined property: App\Controllers\Monitoring::$input
+#0 /mnt/common/devweb/kpkevin/app/Controllers/Monitoring.php(36): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(914): App\Controllers\Monitoring->tambahData()
+#2 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#3 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#4 /mnt/common/devweb/kpkevin/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-07-11 07:56:32 --> Undefined property: App\Controllers\Monitoring::$input
+#0 /mnt/common/devweb/kpkevin/app/Controllers/Monitoring.php(36): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(914): App\Controllers\Monitoring->tambahData()
+#2 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#3 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#4 /mnt/common/devweb/kpkevin/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-07-11 07:56:51 --> Undefined property: App\Controllers\Monitoring::$input
+#0 /mnt/common/devweb/kpkevin/app/Controllers/Monitoring.php(36): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(914): App\Controllers\Monitoring->tambahData()
+#2 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#3 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#4 /mnt/common/devweb/kpkevin/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-07-11 07:58:20 --> Undefined property: App\Controllers\Monitoring::$input
+#0 /mnt/common/devweb/kpkevin/app/Controllers/Monitoring.php(36): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(914): App\Controllers\Monitoring->tambahData()
+#2 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#3 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#4 /mnt/common/devweb/kpkevin/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-07-11 08:04:47 --> Function name must be a string
+#0 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(914): App\Controllers\Monitoring->tambahData()
+#1 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#2 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#3 /mnt/common/devweb/kpkevin/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-07-11 08:05:20 --> Undefined index: gedung
+#0 /mnt/common/devweb/kpkevin/app/Controllers/Monitoring.php(36): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(914): App\Controllers\Monitoring->tambahData()
+#2 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#3 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#4 /mnt/common/devweb/kpkevin/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-07-11 09:10:53 --> 
+#0 /mnt/common/devweb/kpkevin/system/HTTP/RedirectResponse.php(92): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute()
+#1 /mnt/common/devweb/kpkevin/system/Common.php(813): CodeIgniter\HTTP\RedirectResponse->route()
+#2 /mnt/common/devweb/kpkevin/app/Controllers/Monitoring.php(36): redirect()
+#3 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(914): App\Controllers\Monitoring->tambahData()
+#4 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#5 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#6 /mnt/common/devweb/kpkevin/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-07-11 09:11:11 --> 
+#0 /mnt/common/devweb/kpkevin/system/HTTP/RedirectResponse.php(92): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute()
+#1 /mnt/common/devweb/kpkevin/system/Common.php(813): CodeIgniter\HTTP\RedirectResponse->route()
+#2 /mnt/common/devweb/kpkevin/app/Controllers/Monitoring.php(36): redirect()
+#3 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(914): App\Controllers\Monitoring->tambahData()
+#4 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#5 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#6 /mnt/common/devweb/kpkevin/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-07-11 09:13:40 --> 
+#0 /mnt/common/devweb/kpkevin/system/HTTP/RedirectResponse.php(92): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute()
+#1 /mnt/common/devweb/kpkevin/system/Common.php(813): CodeIgniter\HTTP\RedirectResponse->route()
+#2 /mnt/common/devweb/kpkevin/app/Controllers/Monitoring.php(36): redirect()
+#3 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(914): App\Controllers\Monitoring->tambahData()
+#4 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#5 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#6 /mnt/common/devweb/kpkevin/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-07-11 09:14:41 --> 
+#0 /mnt/common/devweb/kpkevin/system/HTTP/RedirectResponse.php(92): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute()
+#1 /mnt/common/devweb/kpkevin/system/Common.php(813): CodeIgniter\HTTP\RedirectResponse->route()
+#2 /mnt/common/devweb/kpkevin/app/Controllers/Monitoring.php(36): redirect()
+#3 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(914): App\Controllers\Monitoring->tambahData()
+#4 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#5 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#6 /mnt/common/devweb/kpkevin/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2020-07-11 09:14:49 --> 
+#0 /mnt/common/devweb/kpkevin/system/HTTP/RedirectResponse.php(92): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute()
+#1 /mnt/common/devweb/kpkevin/system/Common.php(813): CodeIgniter\HTTP\RedirectResponse->route()
+#2 /mnt/common/devweb/kpkevin/app/Controllers/Monitoring.php(36): redirect()
+#3 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(914): App\Controllers\Monitoring->tambahData()
+#4 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#5 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#6 /mnt/common/devweb/kpkevin/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}

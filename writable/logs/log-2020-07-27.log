@@ -1,0 +1,26 @@
+CRITICAL - 2020-07-27 00:39:59 --> syntax error, unexpected '}', expecting end of file
+#0 /mnt/common/devweb/kpkevin/system/Common.php(1087): CodeIgniter\View\View->render()
+#1 /mnt/common/devweb/kpkevin/app/Controllers/AboutController.php(23): view()
+#2 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(914): App\Controllers\AboutController->index()
+#3 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#4 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#5 /mnt/common/devweb/kpkevin/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2020-07-27 00:40:29 --> Undefined variable: item
+#0 /mnt/common/devweb/kpkevin/app/Views/about.php(7): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /mnt/common/devweb/kpkevin/system/View/View.php(246): include('/mnt/common/dev...')
+#2 /mnt/common/devweb/kpkevin/system/Common.php(1087): CodeIgniter\View\View->render()
+#3 /mnt/common/devweb/kpkevin/app/Controllers/AboutController.php(23): view()
+#4 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(914): App\Controllers\AboutController->index()
+#5 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#6 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#7 /mnt/common/devweb/kpkevin/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2020-07-27 00:40:43 --> syntax error, unexpected '}', expecting end of file
+#0 /mnt/common/devweb/kpkevin/system/Common.php(1087): CodeIgniter\View\View->render()
+#1 /mnt/common/devweb/kpkevin/app/Controllers/AboutController.php(23): view()
+#2 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(914): App\Controllers\AboutController->index()
+#3 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#4 /mnt/common/devweb/kpkevin/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#5 /mnt/common/devweb/kpkevin/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
