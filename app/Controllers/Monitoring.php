@@ -38,8 +38,13 @@ class Monitoring extends Controller
 
     public function grafik()
     {
+        $gedungs = new DataGedung();
+        $gedungs = $gedungs->asArray()->findAll();
+
         echo view('layout/header');
-        echo view('monitoring/grafik');
+        echo view('monitoring/grafik',[
+            'gedungs' => $gedungs
+        ]);
         echo view('layout/footer');
     }
     
@@ -83,6 +88,7 @@ class Monitoring extends Controller
     public function getDataMonitoring(){
         $start = $this->request->getGet('startDate');
         $end = $this->request->getGet('endDate');
+        $idGedung = $this->request->getGet('idGedung');
 
         try {
             $start=new DateTime($start);
@@ -99,9 +105,9 @@ class Monitoring extends Controller
         }
 
         if(!$start || !$end){
-            $query = $this->db->query('SELECT * FROM data_monitoring_listrik ORDER BY waktu_rekord ASC');
+            $query = $this->db->query('SELECT * FROM data_monitoring_listrik WHERE id_gedung='.$idGedung.' ORDER BY waktu_rekord ASC');
         }else{
-            $query = $this->db->query('SELECT * FROM data_monitoring_listrik WHERE waktu_rekord BETWEEN '."'".$start."'"." and "."'".$end."'"."ORDER BY waktu_rekord ASC");
+            $query = $this->db->query('SELECT * FROM data_monitoring_listrik WHERE (id_gedung='.$idGedung.') and (waktu_rekord BETWEEN '."'".$start."'"." and "."'".$end."'".") ORDER BY waktu_rekord ASC");
         }
 
         $result = $query->getResult();

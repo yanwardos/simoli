@@ -7,6 +7,13 @@
         <div class="col-lg-4 col-md-12 col-sm-12">
             <div class="row">
                 <div class="col">
+                    <label for="id-gedung">Gedung</label>
+                    <select class="form-control" name="id-gedung" id="id-gedung">
+                        <?php foreach ($gedungs as $key => $value) {?>
+                            <option value="<?php echo $value['id_gedung']?>"><?php echo $value['nama_gedung']?></option>
+                        <?php } ?>
+                    </select>
+                    <hr>
                     <label for="start-date">Start Date</label>
                     <input class="form-control" type="date" name="start-date" id="start-date">
                     <hr>
@@ -25,22 +32,27 @@
 <script>
     var startDate = document.getElementById('start-date');
     var endDate = document.getElementById('end-date');
+    var idGedung = document.getElementById('id-gedung');
     
     startDate.onchange = function(){
-        if(startDate.value!="" && endDate.value!="") updateGrafik(startDate.value, endDate.value);
+        if(startDate.value!="" && endDate.value!="") updateGrafik(idGedung.value, startDate.value, endDate.value);
     }
 
     endDate.onchange = function(){
-        if(startDate.value!="" && endDate.value!="") updateGrafik(startDate.value, endDate.value);
+        if(startDate.value!="" && endDate.value!="") updateGrafik(idGedung.value, startDate.value, endDate.value);
+    }
+
+    idGedung.onchange = function(){
+        if(startDate.value!="" && endDate.value!="") updateGrafik(idGedung.value, startDate.value, endDate.value);
     }
 
     window.onload = function(){
         updateGrafik();
     }
 
-    function updateGrafik(startDate=false, endDate=false){
+    function updateGrafik(idGedung=false, startDate=false, endDate=false){
 
-        getData(startDate, endDate, function(data){
+        getData(idGedung, startDate, endDate, function(data){
             jams = Array();
             kwhs = Array();
             data.forEach(element => {
@@ -80,11 +92,12 @@
         })
     }
 
-    function getData(startDate, endDate, onSucces){
+    function getData(idGedung, startDate, endDate, onSucces){
         $.ajax({
             type  : 'GET',
             url   : '<?php base_url()?>/datamonitoring',
             data:{
+                idGedung: idGedung,
                 startDate: startDate,
                 endDate: endDate
             },

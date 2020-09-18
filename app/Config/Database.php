@@ -31,10 +31,10 @@ class Database extends \CodeIgniter\Database\Config
 	 */
 	public $default = [
 		'DSN'      => '',
-		'hostname' => 'ec2-54-247-103-43.eu-west-1.compute.amazonaws.com',
-		'username' => 'kgingyqlshafyw',
-		'password' => 'd14971e84e9a15c71a7e2570717dab87068351eb994c4b7316aa83f87871f52b',
-		'database' => 'd13kr3vtj4eso',
+		'hostname' => 'localhost',  //'ec2-54-247-103-43.eu-west-1.compute.amazonaws.com',
+		'username' => 'root', //'kgingyqlshafyw',
+		'password' => 'mysqldb', //'d14971e84e9a15c71a7e2570717dab87068351eb994c4b7316aa83f87871f52b',
+		'database' => 'monitoring_listrik', //'d13kr3vtj4eso',
 		'DBDriver' => 'MySQLi',
 		'DBPrefix' => '',
 		'pConnect' => false,
@@ -48,7 +48,7 @@ class Database extends \CodeIgniter\Database\Config
 		'compress' => false,
 		'strictOn' => false,
 		'failover' => [],
-		'port'     => 5432,
+		'port'     => 3306, //5432,
 	];
 
 	/**

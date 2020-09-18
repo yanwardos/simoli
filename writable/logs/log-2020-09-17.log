@@ -1,0 +1,11 @@
+CRITICAL - 2020-09-17 23:07:18 --> MySQL server has gone away
+#0 /mnt/common/devweb/kpkevin/simoli/system/Database/BaseConnection.php(377): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /mnt/common/devweb/kpkevin/simoli/system/Database/BaseConnection.php(643): CodeIgniter\Database\BaseConnection->initialize()
+#2 /mnt/common/devweb/kpkevin/simoli/system/Database/BaseBuilder.php(1859): CodeIgniter\Database\BaseConnection->query()
+#3 /mnt/common/devweb/kpkevin/simoli/system/Model.php(445): CodeIgniter\Database\BaseBuilder->get()
+#4 /mnt/common/devweb/kpkevin/simoli/app/Controllers/Gedung.php(19): CodeIgniter\Model->findAll()
+#5 /mnt/common/devweb/kpkevin/simoli/system/CodeIgniter.php(914): App\Controllers\Gedung->index()
+#6 /mnt/common/devweb/kpkevin/simoli/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#7 /mnt/common/devweb/kpkevin/simoli/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#8 /mnt/common/devweb/kpkevin/simoli/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#9 {main}
