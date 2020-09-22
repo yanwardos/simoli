@@ -21,6 +21,7 @@ class Arduino extends Controller
 	{
 		try
 		{
+			// AMBIL DATA DARI PARAMETER GET
 			$data['id_sensor']    = $this->request->getGet('id_sensor');
 			$waktu                = new DateTime('now', new DateTimeZone('Asia/Jakarta'));
 			$data['arus']         = $this->request->getGet('arus');
