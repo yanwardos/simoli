@@ -37,6 +37,9 @@ $routes->add('/admon', 'Monitoring::tambah');
 $routes->add('/grafik', 'Monitoring::grafik');
 $routes->add('/datamonitoring', 'Monitoring::getDataMonitoring');
 
+$routes->add('/adsen', 'Sensor::tambah');
+$routes->add('/tambahsensor', 'Sensor::tambahsensor');
+
 $routes->add('/gedung', 'Gedung::index');
 $routes->add('/tambahgedung', 'Gedung::tambahIface');
 $routes->add('/adged', 'Gedung::tambah');

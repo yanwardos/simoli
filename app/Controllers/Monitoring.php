@@ -4,6 +4,7 @@ use CodeIgniter\Controller;
 use App\Models;
 use App\Models\DataGedung;
 use App\Models\DataMonitoring;
+use App\Models\DataSensor;
 use CodeIgniter\Database\Database;
 use CodeIgniter\HTTP\IncomingRequest;
 use CodeIgniter\HTTP\Request;
@@ -53,9 +54,13 @@ class Monitoring extends Controller
 		$gedungs = new DataGedung();
 		$gedungs = $gedungs->asArray()->findAll();
 
+		$sensors = new DataSensor();
+		$sensors = $sensors->asArray()->findAll();
+
 		echo view('layout/header');
 		echo view('monitoring/tambah', [
 					  'gedungs' => $gedungs,
+					  'sensors' => $sensors,
 				  ]);
 		echo view('layout/footer');
 	}
@@ -65,7 +70,7 @@ class Monitoring extends Controller
 		try
 		{
 			$waktu                = $this->request->getPost('waktu-tanggal') . ' ' . $this->request->getPost('waktu-jam');
-			$data['id_gedung']    = $this->request->getPost('gedung');
+			$data['id_sensor']    = $this->request->getPost('id_sensor');
 			$data['waktu_rekord'] = $waktu;
 			$data['tegangan']     = $this->request->getPost('tegangan');
 			$data['kwh']          = $this->request->getPost('kwh');
