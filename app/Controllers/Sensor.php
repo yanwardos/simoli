@@ -61,4 +61,12 @@ class Sensor extends Controller
 			return $th->getMessage();
 		}
 	}
+
+	public function all(){
+		$sensors = new DataSensor();
+		$sensors = $sensors->asArray()->findAll();
+
+		$this->response->setJSON($sensors, true);
+		print_r(json_encode($sensors));
+	}
 }
