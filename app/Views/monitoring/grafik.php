@@ -5,7 +5,7 @@
 			<hr>
 		</div>
 		<div class="col-lg-4 col-md-12 col-sm-12">
-			<div class="row">
+			<!--div class="row">
 				<div class="col">
 					<label for="resolusi">Resolusi</label>
 					<select class="form-control" name="resolusi" id="resolusi">
@@ -34,7 +34,7 @@
 				<div class="col">
 					
 				</div>
-			</div>
+			</div-->
 		</div>
 	</div>
 </div>
@@ -54,7 +54,22 @@
 
 	window.onload = function(){
 		updateGrafik();
+		update();
+
+		
 	}
+	
+	function update(){
+		getData({
+			"idSensors": [1, 2, 3],
+			"start": "",
+			"end": ""
+		}, function(data){
+			
+			data = data[0]
+			idSensors = [data.idSensor]
+			namaSensors = [data.namaSensor]
+			arus = data.data
 
 	function updateGrafik(startDate=false, endDate=false){
 
@@ -178,6 +193,7 @@
 				onSucces(data);
 			}
 		});
+		return true;
 	}
 
 	function dateAddMinutes(oldDate, minutes){

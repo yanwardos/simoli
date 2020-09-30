@@ -100,14 +100,22 @@ class Monitoring extends Controller
 
 	public function getDataMonitoring()
 	{
-		$start    = $this->request->getGet('startDate');
-		$end      = $this->request->getGet('endDate');
-		$idSensor = $this->request->getGet('idSensor');
+		
+		$data = $this->request->getGet('data');
+		$data = json_decode($data);
+		
+		$start = $data->start;
+		$end = $data->end;
+		$idSensors = $data->idSensors;
 
 		try
 		{
-			$start = new DateTime($start);
-			$start = $start->format('Y-m-d H:m:i');
+			if(is_null($start)||$start==""){
+				$start = false;
+			}else{
+				$start = new DateTime($start);
+				$start = $start->format('Y-m-d H:m:i');
+			}
 		}
 		catch (\Throwable $th)
 		{
@@ -116,25 +124,56 @@ class Monitoring extends Controller
 
 		try
 		{
-			$end = new DateTime($end);
-			$end = $end->format('Y-m-d H:m:i');
+			if(is_null($end)||$end==""){
+				$end = false;
+			}else{
+				$end = new DateTime($end);
+				$end = $end->format('Y-m-d H:m:i');
+			}
 		}
 		catch (\Throwable $th)
 		{
 			$end = false;
 		}
 
+
+		$result = [];
 		if (! $start || ! $end)
 		{
-			$query = $this->db->query('SELECT * FROM data_monitoring WHERE id_sensor=' . $idSensor . ' ORDER BY waktu_rekord ASC');
+			foreach ($idSensors as $idSensor) {
+				$query = $this->db->query('SELECT * FROM register_sensor WHERE id_sensor=' . $idSensor);
+				$sensor = $query->getResult();
+
+				if(sizeof($sensor)!==0){
+					$query = $this->db->query('SELECT * FROM data_monitoring WHERE (id_sensor=' . $idSensor . ') ORDER BY waktu_rekord ASC');
+					array_push($result, [
+						'idSensor'=>$sensor[0]->id_sensor,
+						'namaSensor'=>$sensor[0]->nama_sensor,
+						'data'=>$query->getResult()
+					]);
+				}
+			}
 		}
 		else
 		{
-			$query = $this->db->query('SELECT * FROM data_monitoring WHERE (id_sensor=' . $idSensor . ') and (waktu_rekord BETWEEN ' . "'" . $start . "'" . ' and ' . "'" . $end . "'" . ') ORDER BY waktu_rekord ASC');
+			foreach ($idSensors as $idSensor) {
+				$query = $this->db->query('SELECT * FROM register_sensor WHERE id_sensor=' . $idSensor);
+				$sensor = $query->getResult();
+				
+				if(sizeof($sensor)!==0){
+					$query = $this->db->query('SELECT * FROM data_monitoring WHERE (id_sensor=' . $idSensor . ') and (waktu_rekord BETWEEN ' . "'" . $start . "'" . ' and ' . "'" . $end . "'" . ') ORDER BY waktu_rekord ASC');
+					array_push($result, [
+						'idSensor'=>$sensor[0]->id_sensor,
+						'namaSensor'=>$sensor[0]->nama_sensor,
+						'data'=>$query->getResult()
+					]);
+				}
+			}
+			
 		}
-
-		$result = $query->getResult();
+		
 		$this->response->setJSON($result, true);
 		print_r(json_encode($result));
+		
 	}
 }
