@@ -5,7 +5,7 @@
 			<hr>
 		</div>
 		<div class="col-lg-4 col-md-12 col-sm-12">
-			<div class="row">
+			<!--div class="row">
 				<div class="col">
 					<label for="id-gedung">Gedung</label>
 					<select class="form-control" name="id-gedung" id="id-gedung">
@@ -27,83 +27,92 @@
 				<div class="col">
 					
 				</div>
-			</div>
+			</div-->
 		</div>
 	</div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 <script>
-	var startDate = document.getElementById('start-date');
-	var endDate = document.getElementById('end-date');
 	var idGedung = document.getElementById('id-gedung');
 	
-	startDate.onchange = function(){
-		if(startDate.value!="" && endDate.value!="") updateGrafik(idGedung.value, startDate.value, endDate.value);
-	}
-
-	endDate.onchange = function(){
-		if(startDate.value!="" && endDate.value!="") updateGrafik(idGedung.value, startDate.value, endDate.value);
-	}
-
-	idGedung.onchange = function(){
-		if(startDate.value!="" && endDate.value!="") updateGrafik(idGedung.value, startDate.value, endDate.value);
-	}
-
 	window.onload = function(){
 		updateGrafik();
+		update();
+
+		
 	}
+	
+	function update(){
+		getData({
+			"idSensors": [1, 2, 3],
+			"start": "",
+			"end": ""
+		}, function(data){
+			
+			data = data[0]
+			idSensors = [data.idSensor]
+			namaSensors = [data.namaSensor]
+			arus = data.data
 
-	function updateGrafik(idGedung=false, startDate=false, endDate=false){
-
-		getData(idGedung, startDate, endDate, function(data){
-			jams = Array();
-			kwhs = Array();
-			data.forEach(element => {
-				date = Date.parse(element.waktu_rekord);
-				date = new Date(date);
-				element.waktu = {
-					hari: date.getDay(),
-					tanggal: date.getDate(),
-					bulan: date.getMonth(),
-					tahun: date.getFullYear(),
-					jam: date.getHours()+":"+date.getMinutes()
-				}
-
-				jams.push(element.waktu.jam);
-				kwhs.push(element.kwh)
+			xLabel = new Array()
+			arusSet = new Array()
+			
+			data.data.forEach(element => {
+				xLabel.push(element.waktu_rekord)
+				arusSet.push(element.arus)
 			});
 
-			var ctx = document.getElementById('chart').getContext('2d');
-			var chart = new Chart(ctx, {
-				// The type of chart we want to create
-				type: 'line',
+			dataSet = []
+			dataSet.push({
+				"label": namaSensors[0],
+				"backgroundColor": 'rgb(255, 99, 132)',
+				"borderColor": 'rgb(255, 99, 132)',
+				"data": arusSet
+			})
 
-				// The data for our dataset
-				data: {
-					labels: jams,
-					datasets: [{
-						label: 'KWh',
-						backgroundColor: 'rgb(255, 99, 132)',
-						borderColor: 'rgb(255, 99, 132)',
-						data: kwhs
-					}]
-				},
-
-				// Configuration options go here
-				options: {}
-			});
+			updateGrafik(xLabel, dataSet)
 		})
 	}
 
-	function getData(idGedung, startDate, endDate, onSucces){
+
+	function updateGrafik(xLabel=[], dataSet=[{
+		"label": "",
+		"backgroundColor": 'rgb(255, 99, 132)',
+		"borderColor": 'rgb(255, 99, 132)',
+		"data": "kwhs"
+	}]){
+		console.log(dataSet)
+		var ctx = document.getElementById('chart').getContext('2d');
+		var chart = new Chart(ctx, {
+			// The type of chart we want to create
+			type: 'line',
+			// The data for our dataset
+			data: {
+				labels: xLabel,
+				datasets: dataSet
+			},
+
+			// Configuration options go here
+			options: {}
+		});
+	}
+
+	/*
+	Request format
+		localhost:8000/datamonitoring?data={"idSensors":[1],"start":"2020-09-22", "end":"2020-09-23"}
+	*/
+
+	function getData(data={
+		"idSensors": [],
+		"start": "",
+		"end":""
+	}, onSucces=function(){}){
 		$.ajax({
 			type  : 'GET',
 			url   : '<?php base_url()?>/datamonitoring',
-			data:{
-				idGedung: idGedung,
-				startDate: startDate,
-				endDate: endDate
+			data: {
+				data: JSON.stringify(data)
 			},
 			async : true,
 			dataType : 'json',
@@ -111,5 +120,6 @@
 				onSucces(data);
 			}
 		});
+		return true;
 	}
 </script>
