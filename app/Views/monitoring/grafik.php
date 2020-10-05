@@ -52,11 +52,11 @@
 		if(startDate.value!="" && endDate.value!="") updateGrafik(startDate.value, endDate.value);
 	})
 
+	var idGedung = document.getElementById('id-gedung');
+	
 	window.onload = function(){
 		updateGrafik();
 		update();
-
-		
 	}
 	
 	function update(){
@@ -64,128 +64,74 @@
 			"idSensors": [1, 2, 3],
 			"start": "",
 			"end": ""
-		}, function(data){
-			
-			data = data[0]
-			idSensors = [data.idSensor]
-			namaSensors = [data.namaSensor]
-			arus = data.data
+		}, function(datas){
+			dataSet = []
 
-	function updateGrafik(startDate=false, endDate=false){
+			for(i=0; i<datas.length; i++){
+				data = datas[i]
+				idSensors = [data.idSensor]
+				namaSensors = [data.namaSensor]
+				arus = data.data
 
-		getSensor(false, function(sensors){
-			sensorsData = new Array();
-			sensors.forEach(sensor=>{
-				idSensor = sensor.id_sensor;
-				sensorData = [];
-				getData(idSensor, startDate, endDate, function(data){
-					data.forEach(element => {
-						sensorData.push({
-							jam: element.waktu_rekord,
-							arus: element.arus
-						});
-					});
+				xLabel = new Array()
+				arusSet = new Array()
+				
+				data.data.forEach(element => {
+					xLabel.push(element.waktu_rekord)
+					arusSet.push(element.arus)
 				});
-				sensorsData.push({
-					namaSensor: sensor.nama_sensor,
-					data: sensorData
-				});
-			});
 
-			window.sensorsData = sensorsData;
-
-			// Data preparation
-			start = new Date(startDate + " 00:00:01");
-			end = new Date(endDate + " 23:59:59");
-
-			var resolution;
-			switch(resolusi.value){
-				case "1":
-					resolution = 60;
-				break;
-				case "2":
-					resolution = 360;
-				break;
-				case "3":
-					resolution = 720;
-				break;
+				
+				dataSet.push({
+					"label": namaSensors[0],
+					// "backgroundColor": 'rgb(255, 99, 132)',
+					"borderColor": 'rgb(255, 99, 132)',
+					"data": arusSet
+				})	
 			}
 
-			setTimeout(function(){
-				// Label
-				labels = Array();
-				times = Array();
-				dateLabel = start;
-				labels.push(dateLabel.getFullYear()+"-"+dateLabel.getMonth()+"-"+dateLabel.getDate()+" "+dateLabel.getHours()+":"+dateLabel.getMinutes());
-				times.push(dateLabel);
-				do{
-					dateLabel = dateAddMinutes(dateLabel, resolution);
-					labels.push(dateLabel.getFullYear()+"-"+dateLabel.getMonth()+"-"+dateLabel.getDate()+" "+dateLabel.getHours()+":"+dateLabel.getMinutes());
-					times.push(dateLabel);
-				}while(dateLabel.getTime()<end.getTime());
-
-				// Datasets
-				myDatasets = Array();
-				window.sensorsData.forEach(element=>{
-					arusSensors = element.data;
-					arus = Array();
-
-					if(arusSensors.length>0){
-						times.forEach(element=>{
-							var i = 0;
-							var tmp;
-							batasBawah = element;
-
-							jamArus = new Date(arusSensors[i].jam);
-							// console.log(arusSensors[i])
-							while(jamArus.getTime()<=element.getTime()){
-								tmp=arusSensors[i].arus;
-								i++;
-								jamArus = new Date(arusSensors[i]);
-							}
-							arus.push(tmp);
-						})
-					}
-					
-
-					myDatasets.push({
-						label: element.namaSensor,
-						data: arus,
-						borderColor: 'rgb(255, 99, '+(Math.round(Math.random()*1000))%254 +')',
-
-					})
-				})
-				
-				window.myd = myDatasets;
-
-				var ctx = document.getElementById('chart').getContext('2d');
-				var chart = new Chart(ctx, {
-					// The type of chart we want to create
-					type: 'line',
-
-					// The data for our dataset
-					data: {
-						labels: labels,
-						datasets: myDatasets
-					},
-
-					// Configuration options go here
-					options: {}
-				});
-			}, 1000)
-			
+			updateGrafik(xLabel, dataSet)
 		})
 	}
 
 
-	function getData(idSensor, startDate, endDate, onSucces){
+	function updateGrafik(xLabel=[], dataSet=[{
+		"label": "",
+		"backgroundColor": 'rgb(255, 99, 132)',
+		"borderColor": 'rgb(255, 99, 132)',
+		"data": "kwhs"
+	}]){
+		console.log(dataSet)
+		var ctx = document.getElementById('chart').getContext('2d');
+		var chart = new Chart(ctx, {
+			// The type of chart we want to create
+			type: 'line',
+			// The data for our dataset
+			data: {
+				labels: xLabel,
+				datasets: dataSet
+			},
+
+			// Configuration options go here
+			options: {}
+		});
+	}
+
+	/*
+	Request format
+		localhost:8000/datamonitoring?data={"idSensors":[1],"start":"2020-09-22", "end":"2020-09-23"}
+	*/
+
+	function getData(data={
+		"idSensors": [],
+		"start": "",
+		"end":""
+	}, onSucces=function(){}){
 		$.ajax({
 			type  : 'GET',
 			url   : '<?php base_url()?>/datamonitoring',
-			data:{
-				idSensor: idSensor,
-				startDate: startDate,
-				endDate: endDate
+			data: {
+				data: JSON.stringify(data)
 			},
 			async : true,
 			dataType : 'json',
