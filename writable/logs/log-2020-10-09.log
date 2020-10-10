@@ -1,0 +1,146 @@
+CRITICAL - 2020-10-09 10:07:05 --> Argument 1 passed to CodeIgniter\Database\BaseConnection::query() must be of the type string, object given, called in /home/yanwardo/Documents/simoli/app/Controllers/Monitoring.php on line 106
+#0 /home/yanwardo/Documents/simoli/app/Controllers/Monitoring.php(106): CodeIgniter\Database\BaseConnection->query()
+#1 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(914): App\Controllers\Monitoring->tes()
+#2 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#3 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#4 /home/yanwardo/Documents/simoli/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-09 10:07:29 --> Argument 1 passed to CodeIgniter\Database\BaseConnection::query() must be of the type string, object given, called in /home/yanwardo/Documents/simoli/app/Controllers/Monitoring.php on line 106
+#0 /home/yanwardo/Documents/simoli/app/Controllers/Monitoring.php(106): CodeIgniter\Database\BaseConnection->query()
+#1 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(914): App\Controllers\Monitoring->tes()
+#2 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#3 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#4 /home/yanwardo/Documents/simoli/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-09 10:07:48 --> Argument 1 passed to CodeIgniter\Database\BaseConnection::query() must be of the type string, object given, called in /home/yanwardo/Documents/simoli/app/Controllers/Monitoring.php on line 106
+#0 /home/yanwardo/Documents/simoli/app/Controllers/Monitoring.php(106): CodeIgniter\Database\BaseConnection->query()
+#1 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(914): App\Controllers\Monitoring->tes()
+#2 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#3 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#4 /home/yanwardo/Documents/simoli/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-09 10:07:59 --> Argument 1 passed to CodeIgniter\Database\BaseConnection::query() must be of the type string, object given, called in /home/yanwardo/Documents/simoli/app/Controllers/Monitoring.php on line 106
+#0 /home/yanwardo/Documents/simoli/app/Controllers/Monitoring.php(106): CodeIgniter\Database\BaseConnection->query()
+#1 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(914): App\Controllers\Monitoring->tes()
+#2 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#3 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#4 /home/yanwardo/Documents/simoli/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-09 10:08:14 --> Argument 1 passed to CodeIgniter\Database\BaseConnection::query() must be of the type string, object given, called in /home/yanwardo/Documents/simoli/app/Controllers/Monitoring.php on line 106
+#0 /home/yanwardo/Documents/simoli/app/Controllers/Monitoring.php(106): CodeIgniter\Database\BaseConnection->query()
+#1 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(914): App\Controllers\Monitoring->tes()
+#2 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#3 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#4 /home/yanwardo/Documents/simoli/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-09 10:09:01 --> Argument 1 passed to CodeIgniter\Database\BaseConnection::query() must be of the type string, object given, called in /home/yanwardo/Documents/simoli/app/Controllers/Monitoring.php on line 109
+#0 /home/yanwardo/Documents/simoli/app/Controllers/Monitoring.php(109): CodeIgniter\Database\BaseConnection->query()
+#1 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(914): App\Controllers\Monitoring->tes()
+#2 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#3 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#4 /home/yanwardo/Documents/simoli/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-09 10:09:29 --> Object of class CodeIgniter\Database\MySQLi\Result could not be converted to string
+#0 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(914): App\Controllers\Monitoring->tes()
+#1 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#2 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#3 /home/yanwardo/Documents/simoli/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-10-09 10:09:34 --> Object of class CodeIgniter\Database\MySQLi\Result could not be converted to string
+#0 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(914): App\Controllers\Monitoring->tes()
+#1 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#2 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#3 /home/yanwardo/Documents/simoli/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-10-09 10:09:38 --> Object of class CodeIgniter\Database\MySQLi\Result could not be converted to string
+#0 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(914): App\Controllers\Monitoring->tes()
+#1 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#2 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#3 /home/yanwardo/Documents/simoli/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-10-09 10:09:52 --> Object of class CodeIgniter\Database\MySQLi\Result could not be converted to string
+#0 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(914): App\Controllers\Monitoring->tes()
+#1 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#2 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#3 /home/yanwardo/Documents/simoli/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-10-09 10:14:01 --> Cannot use object of type stdClass as array
+#0 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(914): App\Controllers\Monitoring->tes()
+#1 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#2 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#3 /home/yanwardo/Documents/simoli/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-10-09 13:40:18 --> syntax error, unexpected 'catch' (T_CATCH), expecting function (T_FUNCTION) or const (T_CONST)
+#0 /home/yanwardo/Documents/simoli/system/Router/Router.php(192): CodeIgniter\Router\Router->autoRoute()
+#1 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(789): CodeIgniter\Router\Router->handle()
+#2 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt()
+#3 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#4 /home/yanwardo/Documents/simoli/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-09 13:40:24 --> syntax error, unexpected 'catch' (T_CATCH), expecting function (T_FUNCTION) or const (T_CONST)
+#0 /home/yanwardo/Documents/simoli/system/Router/Router.php(192): CodeIgniter\Router\Router->autoRoute()
+#1 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(789): CodeIgniter\Router\Router->handle()
+#2 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt()
+#3 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#4 /home/yanwardo/Documents/simoli/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-09 13:40:39 --> syntax error, unexpected 'catch' (T_CATCH), expecting function (T_FUNCTION) or const (T_CONST)
+#0 /home/yanwardo/Documents/simoli/system/Router/Router.php(192): CodeIgniter\Router\Router->autoRoute()
+#1 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(789): CodeIgniter\Router\Router->handle()
+#2 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt()
+#3 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#4 /home/yanwardo/Documents/simoli/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-09 13:40:56 --> syntax error, unexpected 'catch' (T_CATCH), expecting function (T_FUNCTION) or const (T_CONST)
+#0 /home/yanwardo/Documents/simoli/system/Router/Router.php(192): CodeIgniter\Router\Router->autoRoute()
+#1 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(789): CodeIgniter\Router\Router->handle()
+#2 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt()
+#3 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#4 /home/yanwardo/Documents/simoli/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-09 13:41:00 --> syntax error, unexpected 'catch' (T_CATCH), expecting function (T_FUNCTION) or const (T_CONST)
+#0 /home/yanwardo/Documents/simoli/system/Router/Router.php(192): CodeIgniter\Router\Router->autoRoute()
+#1 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(789): CodeIgniter\Router\Router->handle()
+#2 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt()
+#3 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#4 /home/yanwardo/Documents/simoli/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-09 13:41:04 --> syntax error, unexpected 'catch' (T_CATCH), expecting function (T_FUNCTION) or const (T_CONST)
+#0 /home/yanwardo/Documents/simoli/system/Router/Router.php(192): CodeIgniter\Router\Router->autoRoute()
+#1 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(789): CodeIgniter\Router\Router->handle()
+#2 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt()
+#3 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#4 /home/yanwardo/Documents/simoli/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-09 13:41:18 --> syntax error, unexpected 'catch' (T_CATCH), expecting function (T_FUNCTION) or const (T_CONST)
+#0 /home/yanwardo/Documents/simoli/system/Router/Router.php(192): CodeIgniter\Router\Router->autoRoute()
+#1 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(789): CodeIgniter\Router\Router->handle()
+#2 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt()
+#3 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#4 /home/yanwardo/Documents/simoli/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-09 13:42:42 --> syntax error, unexpected 'catch' (T_CATCH), expecting function (T_FUNCTION) or const (T_CONST)
+#0 /home/yanwardo/Documents/simoli/system/Router/Router.php(192): CodeIgniter\Router\Router->autoRoute()
+#1 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(789): CodeIgniter\Router\Router->handle()
+#2 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(360): CodeIgniter\CodeIgniter->tryToRouteIt()
+#3 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#4 /home/yanwardo/Documents/simoli/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2020-10-09 20:35:25 --> Object of class stdClass could not be converted to string
+#0 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(914): App\Controllers\Monitoring->getDataMonitoring()
+#1 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#2 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#3 /home/yanwardo/Documents/simoli/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-10-09 20:35:49 --> Object of class stdClass could not be converted to string
+#0 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(914): App\Controllers\Monitoring->getDataMonitoring()
+#1 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#2 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#3 /home/yanwardo/Documents/simoli/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2020-10-09 20:37:11 --> Object of class stdClass could not be converted to string
+#0 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(914): App\Controllers\Monitoring->getDataMonitoring()
+#1 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(400): CodeIgniter\CodeIgniter->runController()
+#2 /home/yanwardo/Documents/simoli/system/CodeIgniter.php(308): CodeIgniter\CodeIgniter->handleRequest()
+#3 /home/yanwardo/Documents/simoli/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}

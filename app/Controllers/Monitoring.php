@@ -98,6 +98,29 @@ class Monitoring extends Controller
 		}
 	}
 
+	public function tes(){
+		$monitorings = new DataMonitoring();
+		$monitorings = $monitorings->asArray()->findAll();
+
+		$idSensor = 1;
+		// $query = $this->db->query('SELECT * FROM data_monitoring WHERE (id_sensor=' . '1' . ') ORDER BY waktu_rekord DESC');
+		$query = 'SELECT * FROM data_monitoring WHERE (id_sensor=' . '1' . ') ORDER BY waktu_rekord DESC LIMIT 1';
+		
+		$query_exec = $this->db->query($query);
+
+		$result = $query_exec->getResult();
+
+		foreach ($result as $key => $value) {
+			$b = new DateTime($value->waktu_rekord);
+			$now = new DateTime('now');
+			var_dump($b>$now);
+
+			echo "<br>";
+			echo "<br>";
+
+		}
+	}
+
 	public function getDataMonitoring()
 	{
 		
