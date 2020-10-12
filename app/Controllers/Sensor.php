@@ -63,10 +63,28 @@ class Sensor extends Controller
 	}
 
 	public function all(){
-		$sensors = new DataSensor();
-		$sensors = $sensors->asArray()->findAll();
+		$idSensor = $this->request->getGet('sensor');
+		if($idSensor=="false"){
+			$sensors = new DataSensor();
+			$sensors = $sensors->asArray()->findAll();
+		}else{
+			$sensors = $this->db->query('SELECT * FROM register_sensor WHERE id_sensor='.$idSensor);
+			$sensors = $sensors->getResult();
+		}
 
 		$this->response->setJSON($sensors, true);
 		print_r(json_encode($sensors));
+	}
+
+	public function sensordet(){
+		$id_sensor = $this->request->getGet('id_sensor');
+		
+		if(is_null($id_sensor)) return $this->response->setStatusCode(400, 'Forbidden');
+
+		echo view('layout/header');
+		echo view('monitoring/grafik', [
+					'sensors' => $id_sensor
+				  ]);
+		echo view('layout/footer');
 	}
 }

@@ -48,9 +48,7 @@
 							<?php echo $sensor['id_gedung'];?>
 						</td>
 						<td class="col-4">
-							<button class="btn btn-dark btn-sm p-1 m-1">Edit</button>
-							<button class="btn btn-dark btn-sm p-1 m-1">Hapus</button>
-							<a href="#" class="btn btn-dark btn-sm p-1 m-1">Cek data</a>
+							<a href="<?php base_url() ?>/sensordet?id_sensor=<?php echo $sensor['id_sensor']?>" class="btn btn-dark btn-sm p-1 m-1">Cek data</a>
 						</td>
 					</tr>
 						<?php

@@ -46,6 +46,8 @@ $routes->add('/adged', 'Gedung::tambah');
 
 $routes->add('/about', 'AboutController::index');
 
+$routes->add('/sensordet', 'Sensor::sensordet');
+
 /**
  * --------------------------------------------------------------------
  * Additional Routing

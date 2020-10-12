@@ -9,21 +9,10 @@
 				<div class="col">
 					<label for="resolusi">Resolusi</label>
 					<select class="form-control" name="resolusi" id="resolusi">
-						<option value="1" resolusi='3600'>1 Jam</option>
+						<option value="1" resolusi='3600'>30 Detik</option>
 						<option value="2" resolusi='21600'>6 Jam</option>
 						<option value="3" resolusi='43200'>12 Jam</option>
 					</select>
-					<!--label for="id-sensor">Sensor</label>
-					<hr>
-					<select class="form-control" name="id-sensor" id="id-sensor">
-						<?php
-						foreach ($sensors as $key => $value)
-						{
-							?>
-							<option value="<?php echo $value['id_sensor']?>"><?php echo $value['nama_sensor']?></option>
-							<?php
-						} ?>
-					</select-->
 					<hr>
 					<label for="start-date">Start Date</label>
 					<input class="form-control" type="date" name="start-date" id="start-date">
@@ -50,19 +39,25 @@
 
 	$('.form-control').change(function(){
 		resolusi = $('#resolusi').val()
+		resolusi = parseInt(resolusi)
 		switch(resolusi){
 			case 1:
-				resolusi = 3600
+				resolusi = 30
 			break;
 			case 2:
-				resolusi = 21600
+				resolusi = 60*60*6
 			break;
 			case 3:
-				resolusi = 43200
+				resolusi = 60*60*12
 			break;
 		}
+
+		strDate = $('#start-date').val()
+		edDate = $('#end-date').val()
 		if(startDate.value!="" && endDate.value!="") update({
-			resolusi: resolusi
+			resolusi: resolusi,
+			sDate: strDate,
+			eDate: edDate
 		})
 	})
 
@@ -71,9 +66,16 @@
 	}
 	
 	function update(payload = {
-		resolusi: 30
+		resolusi: 30,
+		sDate: "",
+		eDate: ""
 	}){
-		getSensor(false, (sensors)=>{
+		getSensor(<?php 
+		if(isset($sensors)){
+			echo json_encode($sensors);
+		}else{
+			echo "false";
+		}?>, (sensors)=>{
 			sensors_ = []
 			sensors.forEach(element => {
 				sensors_.push(element.id_sensor)
@@ -81,25 +83,38 @@
 
 			getData({
 				"idSensors": sensors_,
-				"start": "",
-				"end":""
+				"start": payload.sDate,
+				"end": payload.eDate
 			}, (datas)=>{
-				startDate = new Date()
-				endDate = new Date()
-
+				startDate = false
+				endDate = false
 
 				dataSet = []
 				datas.forEach(element => {
 					dataArus = []
+					timeIndv = false
+					endTimeIndv = false
+					sensorElm = element
 					element.data.forEach(element=>{
 						time = new Date(element.waktu_rekord)
+						if(timeIndv==false && endTimeIndv==false){
+							timeIndv = time
+							endTimeIndv = new Date(sensorElm.data.length-1)
+						}
+						if(startDate==false && endDate==false){
+							startDate=time
+							endDate=time
+						}
 						if(time>endDate) endDate = time
 						if(time<startDate) startDate = time
 
-						dataArus.push({
-							x: formatDate(time),
-							y: element.arus
-						})
+						do{
+							dataArus.push({
+								x: formatDate(time),
+								y: element.arus
+							})
+							timeIndv = dateAddSecond(timeIndv, resolusi)
+						}while(timeIndv<=endTimeIndv)
 					})
 
 					dataSet.push({
@@ -112,10 +127,10 @@
 
 				xLabel = []
 				date = startDate
-				while(date<endDate){
+				do{
 					xLabel.push(formatDate(date))
-					date = dateAddSecond(date, payload.resolusi)
-				}
+					date = dateAddSecond(date, resolusi)
+				}while(date<=endDate)
 
 				updateGrafik(xLabel, dataSet)
 			})
@@ -186,6 +201,9 @@
 		$.ajax({
 			type  : 'GET',
 			url   : '<?php base_url()?>/sensor/all',
+			data: {
+				sensor: sensor
+			},
 			async : true,
 			dataType : 'json',
 			success : function(data){

@@ -55,7 +55,6 @@ class Arduino extends Controller
 			$dataTimeSecond = $dataTime->format('s');
 			$dataTimeSecond = intval($dataTimeSecond);
 			$saveTimeSecond = (floor($dataTimeSecond/$this->saveResolution)) * $this->saveResolution;
-			echo $saveTimeSecond;
 
 			$saveTime = new DateTime($dataTime->format('Y-m-d H:i:'.$saveTimeSecond), new DateTimeZone('Asia/Jakarta'));
 
@@ -64,88 +63,21 @@ class Arduino extends Controller
 			$query_exec = $this->db->query($query);
 			$query_result = $query_exec->getResult();
 
-			var_dump($saveTime);
+
 			if(sizeof($query_result)==0){
 				$data['waktu_rekord'] = $saveTime->format('Y-m-d H:i:s');
 				$dataObj = new DataMonitoring();
 				$a = $dataObj->insert($data);
 
-				echo "ditambah";
+				$this->response->setStatusCode(200, 'Data added');
 			}else{
 				$query_result = $query_result[0];
 				$query = "UPDATE data_monitoring SET arus='".$data['arus']."' WHERE id_rekord='".$query_result->id_rekord."'";
 
 				$this->db->query($query);
 
-				echo "diupdate";
+				$this->response->setStatusCode(200, 'Data updated');
 			}
-			/*
-			if(!is_null($latestTime)){
-				$latestTime = new DateTime($latestTime, new DateTimeZone('Asia/Jakarta'));
-				$limitTime = new DateTime($latestTime->format('Y-m-d H:i:s'), new DateTimeZone('Asia/Jakarta'));
-				$limitTime = $limitTime->add(new DateInterval('PT5S'));
-			}else{
-				$latestTime = false;
-			}
-			
-			if($latestTime==false){
-				$dataBaru = new DataMonitoring();
-				$cobaSimpan = $dataBaru->insert($data);
-			}
-
-			if($dataTime<$limitTime)
-			{
-				// update latest record
-				$query = "UPDATE data_monitoring SET arus='".$data['arus']."' WHERE waktu_rekord='".$latestTime->format('Y-m-d H:i:s')."'";
-				$query_exec = $this->db->query($query);
-				
-				echo "Memperbarui data berhasil";
-			}else{
-				// add new record
-				try
-				{
-
-					$dif = $dataTime->diff($limitTime);
-					$h = intval($dif->h);
-					$m = intval($dif->i);
-					$s = intval($dif->s) + $m*60 + $h*60*60;
-
-					echo "<br>";
-					echo "<br>";
-					
-					$lost = round($s/5);
-					$sec = $s%5;
-
-					$dataBaru   = new DataMonitoring();
-
-					var_dump($latestData);
-
-					for($i=0; $i<$lost; $i++){
-						$tmpData['id_sensor']    = $latestData->id_sensor;
-						$tmpData['arus']         = $latestData->arus;
-						$tmpData['waktu_rekord'] = $limitTime->format('Y-m-d H:i:s');
-						$tmpData['tegangan']    = 220; 
-						$tmpData['kwh']         = 0; 
-						$tmpData['frekuensi']   = 50; 
-						$tmpData['daya_aktif']  = 0; 
-						$tmpData['daya_tampak'] = 0; 
-						$cobaSimpan = $dataBaru->insert($tmpData);
-						$limitTime->add(new DateInterval('PT5S'));
-					}
-
-					$data['waktu_rekord'] = $limitTime->format('Y-m-d H:i:s');
-					$cobaSimpan = $dataBaru->insert($data);
-	
-					echo 'status: ' . $cobaSimpan;
-					echo 'Menyimpan data berhasil';
-				}
-				catch (\Throwable $th)
-				{
-					return $th->getMessage();
-				}
-
-			}
-			*/
 		}
 		catch (\Throwable $th)
 		{

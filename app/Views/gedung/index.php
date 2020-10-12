@@ -39,9 +39,6 @@
                             <?php echo $gedung['nama_gedung'];?>
                         </td>
                         <td class="col-4">
-                            <button class="btn btn-dark btn-sm p-1 m-1">Edit</button>
-                            <button class="btn btn-dark btn-sm p-1 m-1">Hapus</button>
-                            <a href="#" class="btn btn-dark btn-sm p-1 m-1">Cek data</a>
                         </td>
                     </tr>
                     <?php } ?>
